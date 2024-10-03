@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "b7cdeea0-135e-473c-bde8-9f74b2deba11",
+		"name": "KC - Fullstack Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8198940"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/SPA/api/v1/categories.php"
+			},
+			"response": []
+		},
+		{
+			"name": "Select Catagory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/SPA/api/v1/categories.php?id=4e5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8a9b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SPA",
+						"api",
+						"v1",
+						"categories.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4e5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8a9b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost/SPA/api/v1/courses.php"
+			},
+			"response": []
+		},
+		{
+			"name": "Select Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/SPA/api/v1/courses.php?id=L373349028",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SPA",
+						"api",
+						"v1",
+						"courses.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "L373349028"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Category Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/SPA/api/v1/category/courses.php?id=3d4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"SPA",
+						"api",
+						"v1",
+						"category",
+						"courses.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3d4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

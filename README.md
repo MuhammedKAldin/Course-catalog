@@ -26,8 +26,17 @@
 
 ## How to run project:
 
-```
+``` 
+Using Docker :
 docker-compose up --build
+```
+``` 
+Using Xamp :
+- Place the Folder of This Repositry inside this path "C:\xampp\htdocs\SPA" (Create the Folder Named "SPA")
+- start Apache Server
+- start Xamp MySQL
+- create Database named "kc-fullstack"
+- import migrations to the previous created Database
 ```
 
 ## Hosts:

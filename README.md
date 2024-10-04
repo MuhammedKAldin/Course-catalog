@@ -31,7 +31,7 @@ Using Docker :
 docker-compose up --build
 ```
 ``` 
-Using Xamp :
+Using Xamp (This is the Method I used) :
 - Place the Folder of This Repositry inside this path "C:\xampp\htdocs\SPA" (Create the Folder Named "SPA")
 - start Apache Server
 - start Xamp MySQL

@@ -36,7 +36,7 @@ Using Xamp :
 - start Apache Server
 - start Xamp MySQL
 - create Database named "kc-fullstack"
-- import migrations to the previous created Database
+- import migrations to the previous created Database to create the tables 'category' and 'course'
 ```
 
 ## Hosts:

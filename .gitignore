@@ -1,2 +1,3 @@
 .idea
-database/volume
+# database/volume
+/database/volume/mysql.sock

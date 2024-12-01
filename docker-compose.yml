@@ -33,26 +33,48 @@ services:
       - 8001:3306
 
   api:
-    image: php:8.3-apache
+    build:
+      context: .
+      dockerfile: Dockerfile.api  # Use the custom Dockerfile name
     container_name: api
     depends_on:
       - db
     volumes:
-      - ./api/:/var/www/html/
+      - ./api/v1:/var/www/html/
     stdin_open: true
     tty: true
     hostname: api.cc.localhost
     labels:
       - traefik.http.routers.api.rule=Host(`api.cc.localhost`)
+    
   front:
-    image: php:8.3-apache
-    container_name: front
+      image: node:18 # Node.js image to run React
+      container_name: front
+      depends_on:
+        - api
+      working_dir: /app
+      volumes:
+        - ./front_end:/app
+      ports:
+        - "3000:3000"  # Exposes React's development server on port 3000
+      command: |
+        bash -c "npm install && npm start" # Installs dependencies and starts React
+      stdin_open: true
+      tty: true
+      hostname: front.cc.localhost
+      labels:
+        - traefik.http.routers.front.rule=Host(`cc.localhost`)
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db  # The hostname of the MySQL container
+      PMA_USER: test_user
+      PMA_PASSWORD: test_password
+    ports:
+      - "8081:80"  # Exposes phpMyAdmin on port 8081
     depends_on:
-      - api
-    volumes:
-      - ./front_end/:/var/www/html/
-    stdin_open: true
-    tty: true
-    hostname: api.cc.localhost
+      - db
     labels:
-      - traefik.http.routers.front.rule=Host(`cc.localhost`)
+      - traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.cc.localhost`)

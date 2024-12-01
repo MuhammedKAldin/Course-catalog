@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "b7cdeea0-135e-473c-bde8-9f74b2deba11",
-		"name": "KC - Fullstack Task",
+		"_postman_id": "b286e96d-885e-4eec-a389-be8801fd5476",
+		"name": "KC - Fullstack Task Docker",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "8198940"
+		"_exporter_id": "8198940",
+		"_collection_link": "https://webenia-team.postman.co/workspace/Countries-API~e3b0e14e-d6c1-476d-a4c5-208481bfebc6/collection/8198940-b286e96d-885e-4eec-a389-be8801fd5476?action=share&source=collection_link&creator=8198940"
 	},
 	"item": [
 		{
@@ -11,7 +12,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost/SPA/api/v1/categories.php"
+				"url": "http://api.cc.localhost/categories.php"
 			},
 			"response": []
 		},
@@ -21,15 +22,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/SPA/api/v1/categories.php?id=4e5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8a9b",
+					"raw": "http://api.cc.localhost/categories.php?id=4e5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8a9b",
 					"protocol": "http",
 					"host": [
+						"api",
+						"cc",
 						"localhost"
 					],
 					"path": [
-						"SPA",
-						"api",
-						"v1",
 						"categories.php"
 					],
 					"query": [
@@ -47,7 +47,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost/SPA/api/v1/courses.php"
+				"url": "http://api.cc.localhost/courses.php"
 			},
 			"response": []
 		},
@@ -57,15 +57,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/SPA/api/v1/courses.php?id=L373349028",
+					"raw": "http://api.cc.localhost/courses.php?id=L373349028",
 					"protocol": "http",
 					"host": [
+						"api",
+						"cc",
 						"localhost"
 					],
 					"path": [
-						"SPA",
-						"api",
-						"v1",
 						"courses.php"
 					],
 					"query": [
@@ -84,15 +83,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost/SPA/api/v1/category/courses.php?id=3d4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a",
+					"raw": "http://api.cc.localhost/category/courses.php?id=3d4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a",
 					"protocol": "http",
 					"host": [
+						"api",
+						"cc",
 						"localhost"
 					],
 					"path": [
-						"SPA",
-						"api",
-						"v1",
 						"category",
 						"courses.php"
 					],
@@ -103,6 +101,15 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://api.cc.localhost/test.php"
 			},
 			"response": []
 		}

@@ -9,3 +9,5 @@ if ($db) {
 } else {
     echo "Failed to connect to the database.";
 }
+
+// echo "Database connection successful!";

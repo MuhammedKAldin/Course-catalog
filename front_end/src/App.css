@@ -43,6 +43,10 @@ header{
   z-index: 1;
 }
 
+.corner :hover{
+  background-color: #4efafae7;
+}
+
 .card-body{
   overflow: hidden;
 }
@@ -116,6 +120,13 @@ a:hover{
   transition: opacity 300ms ease-out;
 }
 
+.course-title{
+  display: inline-block;
+  max-width: 27ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 /* Tablet View */
 @media (min-width: 1024px) 

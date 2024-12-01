@@ -1,12 +1,11 @@
 <?php
-//$mysqli = new mysqli("localhost", "root", "", "live", "3308");
 
 class Database {
-    private $host = "localhost";
-    private $database_name = "kc-fullstack";
-    private $username = "root";
-    private $password = "";
-    private $port = "3306";
+    private $host = "db";  // docker-compose
+    private $database_name = "course_catalog"; // docker-compose
+    private $username = "test_user";  // docker-compose
+    private $password = "test_password";  // docker-compose
+    private $port = "3306"; // docker-compose
 
     public $conn;
 

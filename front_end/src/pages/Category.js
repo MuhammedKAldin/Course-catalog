@@ -5,10 +5,11 @@ import { useParams } from "react-router-dom";
 
 const Category = () => {
   const { category } = useParams();
-  const Base_Url = "http://localhost/SPA/api/v1"; // Current Base
+  const Base_Url = "http://api.cc.localhost"; // Updated Base URL
   const URL1 = `${Base_Url}/categories.php`; // Side Links Category Tree & Content Counts
   const URL2 = `${Base_Url}/category/courses.php?id=${category}`; // Return Category's Courses
   const URL3 = `${Base_Url}/categories.php?id=${category}`; // Title of Category Page
+
 
   const [cats, setCats] = useState([]);
   const [courses, setCourses] = useState([]); // Initialize as empty array
@@ -147,7 +148,7 @@ const Category = () => {
                                 src={course.image_preview}
                                 alt={course.title}
                               />
-                              <b>{course.title}</b>
+                              <b class="course-title">{course.title}</b>
                               <ParagraphLimit text={course.description} limit={100} />
                             </div>
                           </div>
